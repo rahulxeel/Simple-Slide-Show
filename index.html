@@ -1,6 +1,34 @@
 <html lang="en">
   <head>
-            <title>Simple slide show</title>        
+            <title>Simple slide show</title>   
+    
+  <script>
+
+
+
+var i = 1; // decalred a variable
+
+slideshow();  // used to start the function 
+
+function slideshow(){ 
+    
+            document.getElementById("slideshow_" + i).style.display = "flex";  // display kara do 
+             setTimeout(function () {
+                            document.getElementById("slideshow_" + i).style.display = "none"; 
+                             if(i>10)
+                                   {i = 1;}
+                             else
+                                   {i = i+1;}
+
+                            slideshow();
+
+                            }, 3000);
+                    
+                     }    
+
+
+  </script>
+
     
   <style>
 
@@ -86,33 +114,6 @@
     </div>   
    
 
-
-  <script>
-
-
-
-var i = 1; // decalred a variable
-
-slideshow();  // used to start the function 
-
-function slideshow(){ 
-    
-            document.getElementById("slideshow_" + i).style.display = "flex";  // display kara do 
-             setTimeout(function () {
-                            document.getElementById("slideshow_" + i).style.display = "none"; 
-                             if(i>10)
-                                   {i = 1;}
-                             else
-                                   {i = i+1;}
-
-                            slideshow();
-
-                            }, 3000);
-                    
-                     }    
-
-
-  </script>
 
 
 </body>
