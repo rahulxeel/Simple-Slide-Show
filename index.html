@@ -1,0 +1,118 @@
+<html lang="en">
+  <head>
+            <title>Simple slide show</title>          
+ </head> 
+ <body>
+       
+<!--##################################################################################################################################
+############################################      S  E  C  T  I  O  N         ######################################################
+####################################################################################################################################-->
+
+
+    <div class="slideshow_container">
+
+            <div class="slideshow" id="slideshow_1">
+                <img src="Assets/slideshow_img/homeslid1.jpg">  <!-- IMG 1 -->
+            </div>
+            <div class="slideshow" id="slideshow_2">
+                <img src="Assets/slideshow_img/homeslid2.jpg"> <!-- IMG 2 -->
+            </div>
+            <div class="slideshow" id="slideshow_3">
+                <img src="Assets/slideshow_img/homeslid3.jpg"> <!-- IMG 3 -->
+            </div>
+            <div class="slideshow" id="slideshow_4">
+                <img src="Assets/slideshow_img/homeslid1.jpg"> <!-- IMG 4 -->
+            </div>
+            <div class="slideshow" id="slideshow_5">
+                <img src="Assets/slideshow_img/homeslid2.jpg"> <!-- IMG 5 -->
+            </div>
+            <div class="slideshow" id="slideshow_6">
+                <img src="Assets/slideshow_img/homeslid3.jpg"> <!-- IMG 6 -->
+            </div>
+            <div class="slideshow" id="slideshow_7">
+                <img src="Assets/slideshow_img/homeslid1.jpg"> <!-- IMG 7 -->
+            </div>
+            <div class="slideshow" id="slideshow_8">
+                <img src="Assets/slideshow_img/homeslid2.jpg"> <!-- IMG 8 -->
+            </div>
+            <div class="slideshow" id="slideshow_9">
+                <img src="Assets/slideshow_img/homeslid3.jpg"> <!-- IMG 9 -->
+            </div>
+            <div class="slideshow" id="slideshow_10">
+                <img src="Assets/slideshow_img/homeslid1.jpg"> <!-- IMG 10 -->
+            </div>
+
+    </div>   
+   
+
+
+  <script>
+
+
+
+var i = 1; // decalred a variable
+
+slideshow();  // used to start the function 
+
+function slideshow(){ 
+    
+            document.getElementById("slideshow_" + i).style.display = "flex";  // display kara do 
+             setTimeout(function () {
+                            document.getElementById("slideshow_" + i).style.display = "none"; 
+                             if(i>10)
+                                   {i = 1;}
+                             else
+                                   {i = i+1;}
+
+                            slideshow();
+
+                            }, 3000);
+                    
+                     }    
+
+
+  </script>
+
+  <style>
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    }
+    
+    body{
+        overflow: hidden;
+    }
+   
+
+   .slideshow_container
+   {
+
+    display: flex;
+    flex-direction: column;
+    height: 600PX;
+    width: 100%;
+    border: 0px green solid;
+
+
+   }
+
+
+   .slideshow{
+    display: none;
+    width: 100%;
+    height: 100%;
+    border:0px black solid;
+
+   }
+      .slideshow img{
+        width: 100%;
+        height: 100%;
+      }
+        
+
+  </style>
+
+</body>
+</html>
